@@ -1,4 +1,11 @@
 terraform {
+  cloud {
+    organization = "redrocket"
+    workspaces {
+      name = "terraform-lab"
+    }
+  }
+
   required_providers {
     aws = {
       source  = "hashicorp/aws"
